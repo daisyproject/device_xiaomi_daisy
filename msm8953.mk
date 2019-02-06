@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product, vendor/xiaomi/msm8953-common/msm8953-common-vendor.mk)
+#$(call inherit-product, vendor/xiaomi/msm8953-common/msm8953-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -345,10 +345,6 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += vndk-sp
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0-v27.so \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0-v27.so
 
 # Thermal
 PRODUCT_PACKAGES += \
