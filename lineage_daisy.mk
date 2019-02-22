@@ -21,6 +21,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_daisy
 BOARD_VENDOR := Xiaomi
+TARGET_VENDOR_PRODUCT_NAME := daisy
+TARGET_VENDOR_DEVICE_NAME := daisy
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
