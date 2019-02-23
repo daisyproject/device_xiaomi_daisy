@@ -388,7 +388,7 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.xiaomi_8996
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -404,6 +404,9 @@ PRODUCT_PACKAGES += vndk-sp
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so
+
+# Perf
+-include vendor/qcom/common/qti-vendor.mk
 
 # Thermal
 PRODUCT_PACKAGES += \
