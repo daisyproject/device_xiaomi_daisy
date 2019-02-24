@@ -250,9 +250,3 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
-# Security Patch Hack to prevent Anti Rollback
-PLATFORM_SECURITY_PATCH := 2018-07-01
-
-# Inherit from the proprietary version
--include vendor/xiaomi/daisy-common/BoardConfigVendor.mk
