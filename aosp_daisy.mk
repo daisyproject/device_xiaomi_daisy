@@ -17,9 +17,14 @@
 $(call inherit-product, device/xiaomi/daisy/full_daisy.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_daisy
+# PixelExperience stuff.
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+
+
+PRODUCT_NAME := aosp_daisy
 BOARD_VENDOR := Xiaomi
 TARGET_VENDOR_PRODUCT_NAME := daisy
 TARGET_VENDOR_DEVICE_NAME := daisy
