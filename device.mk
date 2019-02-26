@@ -21,9 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
-
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
@@ -415,8 +412,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
+<<<<<<< HEAD:device.mk
     android.hardware.thermal@1.0-service \
     android.hardware.usb@1.0-service.basic
+=======
+    android.hardware.thermal@1.0-service
+>>>>>>> parent of b89d405... Build NoCutoutOverlay:msm8953.mk
 
 # Factory Service
 PRODUCT_PACKAGES += \
