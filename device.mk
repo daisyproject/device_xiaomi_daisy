@@ -16,7 +16,6 @@
 
 $(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/daisy-common/daisy-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -334,6 +333,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
+    qcrild.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
@@ -345,6 +345,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
+    init.qti.ims.sh \
     init.baseband.sh \
     init.qcom.post_boot.sh
 
@@ -359,7 +360,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     telephony-ext \
     ims-ext-common \
-    qti-telephony-common
+    qti-telephony-common \
+    android.hardware.radio.config@1.0
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
