@@ -250,3 +250,6 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
+# Inherit from the proprietary version
+-include vendor/xiaomi/daisy/BoardConfigVendor.mk
