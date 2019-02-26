@@ -412,12 +412,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-<<<<<<< HEAD:device.mk
     android.hardware.thermal@1.0-service \
-    android.hardware.usb@1.0-service.basic
-=======
+    android.hardware.usb@1.0-service.basic \
     android.hardware.thermal@1.0-service
->>>>>>> parent of b89d405... Build NoCutoutOverlay:msm8953.mk
 
 # Factory Service
 PRODUCT_PACKAGES += \
