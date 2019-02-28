@@ -48,6 +48,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \

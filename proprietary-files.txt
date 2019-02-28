@@ -164,11 +164,3 @@ lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
-
-# Fingerprint
-framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
-lib/android.hardware.biometrics.fingerprint@2.1.so
-lib/vendor.qti.hardware.fingerprint@1.0.so
-lib64/android.hardware.biometrics.fingerprint@2.1.so
-lib64/vendor.qti.hardware.fingerprint@1.0.so
--vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
