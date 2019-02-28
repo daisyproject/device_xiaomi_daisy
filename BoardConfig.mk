@@ -5,18 +5,15 @@
 #
 
 # Inherit from sdm845-common
--include device/xiaomi/sdm845-common/BoardConfigCommon.mk
+-include device/xiaomi/msm8953-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/beryllium
+DEVICE_PATH := device/xiaomi/daisy
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := beryllium
+TARGET_OTA_ASSERT_DEVICE := daisy
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
-
-# Camera
-TARGET_FACE_UNLOCK_CAMERA_ID := 5
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -25,17 +22,19 @@ TARGET_HW_DISK_ENCRYPTION := true
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
+# FileSystem
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+
 # Kernel
-TARGET_KERNEL_CONFIG := beryllium_defconfig
+TARGET_KERNEL_CONFIG := daisy_defconfig
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
-
-# Partitions
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Inherit from the proprietary version
--include vendor/xiaomi/beryllium/BoardConfigVendor.mk
+-include vendor/xiaomi/daisy/BoardConfigVendor.mk
