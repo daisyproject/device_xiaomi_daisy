@@ -164,3 +164,12 @@ lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
+
+# Fingerprint
+lib/vendor.qti.hardware.fingerprint@1.0.so
+lib64/vendor.qti.hardware.fingerprint@1.0.so
+framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
+
+# In-Call Audio
+-app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
+framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelibrary.jar
