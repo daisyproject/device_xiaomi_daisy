@@ -9,6 +9,9 @@ $(call inherit-product, device/xiaomi/daisy/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# PixelExperience stuff.
+TARGET_GAPPS_ARCH := arm64
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_daisy
 PRODUCT_DEVICE := daisy
