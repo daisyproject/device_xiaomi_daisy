@@ -37,7 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.sensortype=2
 
 # FingerPrint Enabler
-persist.qfp=false
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qfp=false
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \

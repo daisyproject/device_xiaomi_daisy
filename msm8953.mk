@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2018-2019 The LineageOS Project
 #
@@ -125,6 +126,10 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.basic
 
 # VNDK-SP
 PRODUCT_PACKAGES += \

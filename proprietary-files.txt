@@ -88,7 +88,13 @@ lib/vendor.qti.hardware.radio.ims@1.3.so
 -priv-app/ims/ims.apk
 
 # Misc dependencies
-lib/android.hardware.soundtrigger@2.0-core.so
+lib/android.hardware.soundtrigger@2.0.so
+lib/android.hardware.soundtrigger@2.1.so
+lib64/android.hardware.soundtrigger@2.0.so
+lib64/android.hardware.soundtrigger@2.1.so
+lib64/libsoundpool.so
+lib64/libsoundtriggerservice.so
+lib64/libsoundtrigger.so
 
 # Mlipay
 lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
@@ -173,3 +179,56 @@ framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 # In-Call Audio
 -app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
 framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelibrary.jar
+
+# Audio
+lib/libaaudioservice.so
+lib/libaaudio.so
+lib/libaudioclient.so
+lib/libaudioeffect_jni.so
+lib/libaudioflinger.so
+lib/libaudiohal@2.0.so
+lib/libaudiohal@4.0.so
+lib/libaudiohal_deathhandler.so
+lib/libaudiohal.so
+lib/libaudiomanager.so
+lib/libaudiopolicymanager.so
+lib/libaudiopolicyservice.so
+lib/libaudioprocessing.so
+lib/libaudio-resampler.so
+lib/libaudiospdif.so
+lib/libaudioutils.so
+lib/android.hardware.audio@2.0.so
+lib/android.hardware.audio@4.0.so
+lib/android.hardware.audio.common@2.0.so
+lib/android.hardware.audio.common@4.0.so
+lib/android.hardware.audio.effect@2.0.so
+lib/android.hardware.audio.effect@4.0.so
+lib64/android.hardware.audio@2.0.so
+lib64/android.hardware.audio@4.0.so
+lib64/android.hardware.audio.common@2.0.so
+lib64/android.hardware.audio.common@4.0.so
+lib64/android.hardware.audio.effect@2.0.so
+lib64/android.hardware.audio.effect@4.0.so
+lib64/libaaudio.so
+lib64/libaudioclient.so
+lib64/libaudioeffect_jni.so
+lib64/libaudioflinger.so
+lib64/libaudiohal@2.0.so
+lib64/libaudiohal@4.0.so
+lib64/libaudiohal_deathhandler.so
+lib64/libaudiohal.so
+lib64/libaudiomanager.so
+lib64/libaudiopolicymanager.so
+lib64/libaudiopolicyservice.so
+lib64/libaudioprocessing.so
+lib64/libaudioutils.so
+
+# ACDB
+lib/libmdsprpc_system.so
+lib/libadsprpc_system.so
+lib/libsdsprpc_system.so
+lib/libcdsprpc_system.so
+lib64/libmdsprpc_system.so
+lib64/libadsprpc_system.so
+lib64/libsdsprpc_system.so
+lib64/libcdsprpc_system.so
