@@ -180,8 +180,8 @@ etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 lib64/libsoftkeymasterdevice.so:vendor/lib64/libsoftkeymasterdevice.so
 
 # In-Call Audio
--app/QtiTelephonyService/QtiTelephonyService.apk:vendor/app/QtiTelephonyService/QtiTelephonyService.apk
-framework/QtiTelephonyServicelibrary.jar:vendor/framework/QtiTelephonyServicelibrary.jar
+-app/QtiTelephonyService/QtiTelephonyService.apk
+framework/QtiTelephonyServicelibrary.jar
 
 # Audio
 lib/android.hardware.audio@2.0.so
