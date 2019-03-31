@@ -12,6 +12,21 @@ $(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    bootctrl.msm8953
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8953 \
+    libcutils \
+    libgptutils \
+    libz
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \

@@ -7,10 +7,10 @@
 
 set -e
 
-export DEVICE=beryllium
-export DEVICE_COMMON=sdm845-common
+export DEVICE=daisy
+export DEVICE_COMMON=sdm625
 export VENDOR=xiaomi
 
-export DEVICE_BRINGUP_YEAR=2018
+export DEVICE_BRINGUP_YEAR=2019
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
