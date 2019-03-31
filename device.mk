@@ -7,10 +7,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/beryllium/beryllium-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2246
 TARGET_SCREEN_WIDTH := 1080
 
 # FM
@@ -32,7 +31,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Inherit from sdm845-common
-$(call inherit-product, device/xiaomi/sdm845-common/sdm845.mk)
+$(call inherit-product, device/xiaomi/sdm625/sdm625.mk)
 
 # Device fstab
 PRODUCT_PACKAGES += \
@@ -47,7 +46,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
-
-# PocketMode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
