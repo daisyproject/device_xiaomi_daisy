@@ -14,6 +14,10 @@ lib64/libadsprpc_system.so
 lib64/libsdsprpc_system.so
 lib64/libcdsprpc_system.so
 
+# Camera
+lib/android.hardware.camera.provider@2.4.so
+lib64/android.hardware.camera.provider@2.4.so
+
 # CNE
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
@@ -118,6 +122,12 @@ framework/QtiTelephonyServicelibrary.jar
 lib/android.hardware.soundtrigger@2.0-core.so 
 lib/android.hardware.soundtrigger@2.0.so 
 lib/android.hardware.soundtrigger@2.1.so 
+lib/libaudioroute.so
+lib/libyuv.so
+lib/android.frameworks.sensorservice@1.0.so
+lib64/android.frameworks.sensorservice@1.0.so
+lib64/libyuv.so
+lib64/libaudioroute.so
 lib64/android.hardware.soundtrigger@2.0.so 
 lib64/android.hardware.soundtrigger@2.1.so 
 lib64/android.hardware.tetheroffload.control@1.0.so
@@ -219,3 +229,4 @@ lib64/libqti-util_system.so
 lib64/libqti_performance.so
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so
+

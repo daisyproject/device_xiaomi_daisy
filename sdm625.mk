@@ -147,6 +147,7 @@ PRODUCT_PACKAGES += \
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
+    brillo_update_payload \
     update_engine_sideload \
     update_verifier
 
