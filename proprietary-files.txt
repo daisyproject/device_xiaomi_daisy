@@ -68,6 +68,12 @@ etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml 
 framework/com.qualcomm.qti.imscmservice-V2.0-java.jar 
 framework/com.qualcomm.qti.imscmservice-V2.1-java.jar 
+lib/android.hardware.radio@1.0.so
+lib/android.hardware.radio@1.1.so
+lib/android.hardware.radio@1.2.so
+lib64/android.hardware.radio@1.0.so
+lib64/android.hardware.radio@1.1.so
+lib64/android.hardware.radio@1.2.so
 lib64/android.hardware.radio.config@1.0.so
 lib/android.hardware.radio.config@1.0.so
 lib64/com.qualcomm.qti.imscmservice@1.0.so
@@ -135,11 +141,13 @@ lib64/libsoundtriggerservice.so
 lib64/libsoundtrigger.so
 
 # Mlipay
-lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
-lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
-lib64/vendor.xiaomi.hardware.mtdservice@1.1.so
+lib64/vendor.xiaomi.hardware.mfidoca@1.0.so 
+lib64/vendor.xiaomi.hardware.mlipay@1.0.so 
+lib64/vendor.xiaomi.hardware.mlipay@1.1.so 
+lib64/vendor.xiaomi.hardware.mtdservice@1.0.so 
+lib64/vendor.xiaomi.hardware.mtdservice@1.1.so 
+lib/vendor.xiaomi.hardware.mtdservice@1.0.so
+lib/vendor.xiaomi.hardware.mtdservice@1.1.so
 
 # Perf
 lib64/vendor.qti.hardware.iop@1.0.so
@@ -209,6 +217,11 @@ lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
 
+# WiFi Service
+lib64/android.hardware.wifi@1.0.so
+lib64/android.hardware.wifi@1.1.so
+lib64/android.hardware.wifi@1.2.so
+
 # QCOM Boost framework
 bin/perfservice
 etc/init/perfservice.rc
@@ -230,3 +243,68 @@ lib64/libqti_performance.so
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so
 
+# VNDK
+lib/vndk-sp-28/android.hardware.graphics.allocator@2.0.so 
+lib/vndk-sp-28/android.hardware.graphics.common@1.0.so 
+lib/vndk-sp-28/android.hardware.graphics.common@1.1.so 
+lib/vndk-sp-28/android.hardware.graphics.mapper@2.0.so 
+lib/vndk-sp-28/android.hardware.graphics.mapper@2.1.so 
+lib/vndk-sp-28/android.hardware.renderscript@1.0.so 
+lib/vndk-sp-28/android.hidl.base@1.0.so 
+lib/vndk-sp-28/android.hidl.memory@1.0.so 
+lib/vndk-sp-28/libRSCpuRef.so 
+lib/vndk-sp-28/libRSDriver.so 
+lib/vndk-sp-28/libRS_internal.so 
+lib/vndk-sp-28/libbacktrace.so 
+lib/vndk-sp-28/libbase.so 
+lib/vndk-sp-28/libbcinfo.so 
+lib/vndk-sp-28/libblas.so
+lib/vndk-sp-28/libc++.so 
+lib/vndk-sp-28/libcompiler_rt.so 
+lib/vndk-sp-28/libcutils.so 
+lib/vndk-sp-28/libdexfile.so
+lib/vndk-sp-28/libft2.so 
+lib/vndk-sp-28/libhardware.so 
+lib/vndk-sp-28/libhidlbase.so 
+lib/vndk-sp-28/libhidlmemory.so 
+lib/vndk-sp-28/libhidltransport.so 
+lib/vndk-sp-28/libhwbinder.so 
+lib/vndk-sp-28/libion.so 
+lib/vndk-sp-28/liblzma.so 
+lib/vndk-sp-28/libpng.so 
+lib/vndk-sp-28/libunwind.so 
+lib/vndk-sp-28/libunwindstack.so 
+lib/vndk-sp-28/libutils.so 
+lib/vndk-sp-28/libutilscallstack.so 
+lib64/vndk-sp-28/android.hardware.graphics.allocator@2.0.so 
+lib64/vndk-sp-28/android.hardware.graphics.common@1.0.so 
+lib64/vndk-sp-28/android.hardware.graphics.common@1.1.so 
+lib64/vndk-sp-28/android.hardware.graphics.mapper@2.0.so 
+lib64/vndk-sp-28/android.hardware.graphics.mapper@2.1.so 
+lib64/vndk-sp-28/android.hardware.renderscript@1.0.so 
+lib64/vndk-sp-28/android.hidl.base@1.0.so 
+lib64/vndk-sp-28/android.hidl.memory@1.0.so 
+lib64/vndk-sp-28/libRSCpuRef.so 
+lib64/vndk-sp-28/libRSDriver.so 
+lib64/vndk-sp-28/libRS_internal.so 
+lib64/vndk-sp-28/libbacktrace.so 
+lib64/vndk-sp-28/libbase.so 
+lib64/vndk-sp-28/libbcinfo.so 
+lib64/vndk-sp-28/libblas.so 
+lib64/vndk-sp-28/libc++.so 
+lib64/vndk-sp-28/libcompiler_rt.so 
+lib64/vndk-sp-28/libcutils.so 
+lib64/vndk-sp-28/libdexfile.so 
+lib64/vndk-sp-28/libft2.so 
+lib64/vndk-sp-28/libhardware.so 
+lib64/vndk-sp-28/libhidlbase.so 
+lib64/vndk-sp-28/libhidlmemory.so 
+lib64/vndk-sp-28/libhidltransport.so 
+lib64/vndk-sp-28/libhwbinder.so 
+lib64/vndk-sp-28/libion.so 
+lib64/vndk-sp-28/liblzma.so 
+lib64/vndk-sp-28/libpng.so 
+lib64/vndk-sp-28/libunwind.so 
+lib64/vndk-sp-28/libunwindstack.so
+lib64/vndk-sp-28/libutils.so
+lib64/vndk-sp-28/libutilscallstack.so
