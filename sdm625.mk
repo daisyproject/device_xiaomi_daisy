@@ -116,20 +116,10 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
-    vndk-ext \
-    vndk_package
+    vndk-sp
 
 PRODUCT_PACKAGES += \
-    ld.config.txt
-
-# Copy different zygote settings for vendor.img
-PRODUCT_COPY_FILES += \
-    system/core/rootdir/init.zygote64_32.rc:root/init.zygote64_32.rc \
-    system/core/rootdir/init.zygote32_64.rc:root/init.zygote32_64.rc
-
-TARGET_SUPPORTS_32_BIT_APPS := true
-TARGET_SUPPORTS_64_BIT_APPS := true
+    ld.config.vndk_lite.txt
 
 # WiFi Display
 PRODUCT_PACKAGES += \
