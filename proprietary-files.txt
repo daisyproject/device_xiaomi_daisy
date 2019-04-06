@@ -139,6 +139,9 @@ lib64/android.hardware.soundtrigger@2.1.so
 lib64/android.hardware.tetheroffload.control@1.0.so
 lib64/libsoundtriggerservice.so
 lib64/libsoundtrigger.so
+lib/libcrypto.so
+lib64/libcrypto.so
+lib64/libcrypto_utils.so
 
 # Mlipay
 lib64/vendor.xiaomi.hardware.mfidoca@1.0.so 
