@@ -1,13 +1,16 @@
 #!/bin/bash
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-INITIAL_COPYRIGHT_YEAR=2018
+export DEVICE=daisy
+export VENDOR=xiaomi
+
+INITIAL_COPYRIGHT_YEAR=2019
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -23,10 +26,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "daisy beryllium dipper equuleus perseus polaris ursa"
+write_headers "daisy"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true

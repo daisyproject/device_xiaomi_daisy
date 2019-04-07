@@ -7,6 +7,11 @@
 
 set -e
 
+export DEVICE=daisy
+export VENDOR=xiaomi
+
+export DEVICE_BRINGUP_YEAR=2019
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -42,7 +47,7 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 

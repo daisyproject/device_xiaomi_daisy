@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sdm625-common/sdm625-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -17,7 +17,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Properties
--include $(LOCAL_PATH)/common-props.mk
+-include $(LOCAL_PATH)/device-props.mk
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -31,11 +31,29 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    bootctrl.msm8953
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8953 \
+    libcutils \
+    libgptutils \
+    libz
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
 
-# Common init scripts
+# Init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc
@@ -49,6 +67,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprintd
+
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -70,11 +94,14 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/sdm845-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm845-tavil-snd-card_Button_Jack.kl
+    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/idc/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc
 
-# Lights
-#PRODUCT_PACKAGES += \
-#    android.hardware.light@2.0-service.xiaomi_sdm845
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/keylayout/uinput-goodix.kl:system/usr/keylayout/uinput-goo,dix.kl
+    $(LOCAL_PATH)/keylayout/sdm845-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sdm845-tavil-snd-card_Button_Jack.kl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -83,10 +110,6 @@ PRODUCT_COPY_FILES += \
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-
-# Power
-#PRODUCT_PACKAGES += \
-#    power.qcom:64
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -99,6 +122,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Telephony
 PRODUCT_PACKAGES += \

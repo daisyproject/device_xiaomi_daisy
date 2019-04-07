@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter beryllium dipper daisy equuleus perseus polaris ursa,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),daisy)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

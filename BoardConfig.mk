@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := xiaomi
 
-COMMON_PATH := device/xiaomi/sdm625
+DEVICE_PATH := device/xiaomi/daisy
 
 # Architecture
 TARGET_ARCH := arm64
@@ -31,12 +31,14 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.secureboot=0
+TARGET_KERNEL_CONFIG := daisy_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm625
 NEED_KERNEL_MODULE_SYSTEM := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
@@ -49,12 +51,19 @@ AUDIO_FEATURE_ENABLED_HDMI_SPK := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := daisy
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -70,8 +79,19 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# FM
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+BOARD_HAVE_QCOM_FM := true
+
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_EXFAT_DRIVER := exfat
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
@@ -79,9 +99,9 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := (1 << 21) | (1 << 27)
 TARGET_USES_HWC2 := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -106,12 +126,15 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # RenderScript
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
 
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
@@ -120,6 +143,7 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 BOARD_VNDK_VERSION := current
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Inherit from the proprietary version
--include vendor/xiaomi/sdm625-common/BoardConfigVendor.mk
+-include vendor/xiaomi/daisy/BoardConfigVendor.mk
