@@ -183,6 +183,7 @@ lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # SDM
+lib/libsdm-disp-apis.so
 lib64/libsdm-disp-apis.so
 
 # WiFi Display
